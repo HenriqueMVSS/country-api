@@ -1,0 +1,127 @@
+.home-container
+    height: calc(100vh - 75px)
+    overflow-y: scroll 
+    display: flex
+    flex-direction: column
+    align-items: center
+    .filters
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 90%
+        margin: 50px 0
+        .search   
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: center
+            background: var(--elements-color)  
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 12.5%)
+            border-radius: 5px   
+            width: 500px
+            height: 50px
+            &:hover
+                background: var(--hover-color)
+                input
+                    background: var(--hover-color)
+            span
+                color: var(--input-txt-color)
+                margin: 0
+                padding: 0 10px
+            input
+                background: var(--elements-color)
+                width: 90%
+                border: none
+                font-size: 1rem
+                outline: none
+        .dropdown
+            display: flex
+            flex-direction: column
+            position: relative
+            .selected
+                top: 0
+                left: 0
+                display: flex
+                flex-direction: row
+                align-items: center
+                justify-content: center
+                background: var(--elements-color)
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 12.5%)
+                border-radius: 5px
+                width: 220px
+                height: 50px
+                cursor: pointer
+                input
+                    background: var(--elements-color)
+                    border: none
+                    cursor: pointer
+                    outline: none
+                span
+                    margin: 0
+                &:hover
+                    background: var(--hover-color)
+                    input
+                        background: var(--hover-color)
+            .options
+                position: absolute
+                display: flex
+                flex-direction: column
+                width: 220px
+                background: var(--elements-color)
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 12.5%)
+                border-radius: 5px
+                top: 60px     
+                box-sizing: border-box
+                cursor: pointer
+                .option
+                    padding: 7.5px 20px
+                    color: var(--text-color)
+                    &:hover
+                        background: var(--hover-color)
+    .countries
+        width: 90%
+        display: grid
+        grid-template-columns: 20% 20% 20% 20%
+        justify-content: space-between
+        row-gap: 50px
+
+@media (max-width: 768px)
+    .home-container 
+        height: calc(100vh - 75px)
+        overflow-y: scroll
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        .filters 
+            display: flex
+            flex-direction: column 
+            align-items: center 
+            width: 90%
+            margin: 20px 0
+
+            .search 
+                width: 100% 
+                margin-bottom: 10px
+            
+            .dropdown 
+                .selected 
+                    width: 100%
+                
+                .options 
+                    width: 100% 
+                    top: 50px
+
+        .countries 
+            width: 90%
+            display: grid
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+            justify-content: space-around
+            gap: 20px 
+
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+
+
+            
+        
+

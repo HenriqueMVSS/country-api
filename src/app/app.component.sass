@@ -1,0 +1,29 @@
+header
+    height: 75px
+    background: var(--elements-color)
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 0 75px
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 12.5%)
+    .dark-mode
+        display: flex
+        flex-direction: row
+        align-items: center
+        height: 100%
+        padding: 0 1.5rem 
+        cursor: pointer  
+        span
+            color: var(--text-color)    
+        p
+            color: var(--text-color)  
+            font-weight: 700
+        &:hover
+            background: var(--hover-color)
+
+@media (max-width: 768px)
+    header
+        padding: 0 20px
+        .dark-mode
+            padding: 0 0.75rem
